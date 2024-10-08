@@ -1,0 +1,82 @@
+[
+  {
+    "EventName": "Autumn Gala",
+    "EventLocation": "Sydney",
+    "EventTime": "2023-10-15 19:00",
+    "TotalDonors": 75,
+    "TotalDonation": 20000,
+    "EventRating": 4.7
+  },
+  {
+    "EventName": "Memory Walk",
+    "EventLocation": "Melbourne",
+    "EventTime": "2023-09-30 09:00",
+    "TotalDonors": 50,
+    "TotalDonation": 15000,
+    "EventRating": 4.5
+  },
+  {
+    "EventName": "Health Fair",
+    "EventLocation": "Brisbane",
+    "EventTime": "2023-11-05 13:00",
+    "TotalDonors": 40,
+    "TotalDonation": 12000,
+    "EventRating": 4.3
+  },
+  {
+    "EventName": "Book Sale",
+    "EventLocation": "Cairne",
+    "EventTime": "2023-12-12 10:00",
+    "TotalDonors": 65,
+    "TotalDonation": 5000,
+    "EventRating": 4.6
+  },
+  {
+    "EventName": "Music Night",
+    "EventLocation": "Melbourne",
+    "EventTime": "2023-08-21 18:00",
+    "TotalDonors": 80,
+    "TotalDonation": 25000,
+    "EventRating": 4.8
+  },
+  {
+    "EventName": "Craft Fair",
+    "EventLocation": "Melbourne",
+    "EventTime": "2023-10-07 11:00",
+    "TotalDonors": 60,
+    "TotalDonation": 7000,
+    "EventRating": 4.4
+  },
+  {
+    "EventName": "Art Exhibition",
+    "EventLocation": "Perth",
+    "EventTime": "2023-10-22 14:00",
+    "TotalDonors": 55,
+    "TotalDonation": 8000,
+    "EventRating": 4.6
+  },
+  {
+    "EventName": "Dance Marathon",
+    "EventLocation": "Adelaide",
+    "EventTime": "2023-11-18 20:00",
+    "TotalDonors": 70,
+    "TotalDonation": 22000,
+    "EventRating": 4.7
+  },
+  {
+    "EventName": "Garden Party",
+    "EventLocation": "Sydney",
+    "EventTime": "2023-09-15 12:00",
+    "TotalDonors": 90,
+    "TotalDonation": 30000,
+    "EventRating": 4.9
+  },
+  {
+    "EventName": "Cookout Fundraiser",
+    "EventLocation": "Sydney",
+    "EventTime": "2023-08-29 16:00",
+    "TotalDonors": 30,
+    "TotalDonation": 4500,
+    "EventRating": 4.2
+  }
+]

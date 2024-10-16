@@ -3,3 +3,5 @@ module.exports = {
       ? '/Deployment_exercise/'
       : '/'
   }
+
+// This comment will trigger ghpages render

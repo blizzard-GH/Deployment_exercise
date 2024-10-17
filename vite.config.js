@@ -10,6 +10,13 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  build: {
+    outDir: 'dist',
+    logLevel: 'info',
+    chunkSizeWarningLimit: 1000, // Adjust this value as needed
+    target: 'modules',
+    minify: 'esbuild' 
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

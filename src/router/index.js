@@ -1,139 +1,111 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import UserRegistrationPage from '../views/UserRegistration.vue'
-import UserProfilePage from '../views/UserProfile.vue'
-import LoginPage from '../views/LoginPage.vue'
-import AboutUs from '../views/AboutUs.vue'
-import ContactUs from '../views/ContactUs.vue'
-import DonationPage from '../views/DonationPage.vue'
-import InformationPage from '../views/InformationPage.vue'
-import NewsFeed from '../views/NewsFeed.vue'
-import AdminPage from '../views/AdminPage.vue'
-import RatingPage from '../views/RatingPage.vue'
-import FireLogin from '../views/FirebaseLogin.vue'
-import FireRegister from '../views/FirebaseRegistrationPage.vue'
-import AddBookView from '../views/AddBook.vue'
-import BookList from '../components/BookList.vue'
-import store from '../store/store.js'
-import GetBookCountView from '../views/GetBookCountView.vue'
-import WeatherView from '../views/WeatherView.vue'
-import CountBookAPI from '../views/CountBookAPI.vue'
-import GetAllBookAPI from '../views/GetAllBookAPI.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import store from '../store/store.js';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: InformationPage
+    component: () => import('../views/InformationPage.vue')
   },
   {
     path: '/about',
     name: 'AboutUs',
-    component: AboutUs
-    //  Per-route Guard
-    //  beforeEnter: (to, from) => {
-    // return false
-    // }
+    component: () => import('../views/AboutUs.vue')
   },
   {
     path: '/login',
     name: 'LoginPage',
-    component: LoginPage
+    component: () => import('../views/LoginPage.vue')
   },
   {
     path: '/userProfile',
     name: 'UserProfilePage',
-    component: UserProfilePage
+    component: () => import('../views/UserProfile.vue')
   },
   {
     path: '/contactUs',
     name: 'ContactUs',
-    component: ContactUs
+    component: () => import('../views/ContactUs.vue')
   },
   {
     path: '/donation',
     name: 'DonationPage',
-    component: DonationPage
+    component: () => import('../views/DonationPage.vue')
   },
   {
     path: '/userRegistration',
     name: 'UserRegistrationPage',
-    component: UserRegistrationPage
+    component: () => import('../views/UserRegistration.vue')
   },
   {
     path: '/newsFeed',
     name: 'NewsFeed',
-    component: NewsFeed
+    component: () => import('../views/NewsFeed.vue')
   },
   {
     path: '/adminPage',
     name: 'AdminPage',
-    component: AdminPage
+    component: () => import('../views/AdminPage.vue')
   },
   {
     path: '/ratingPage',
     name: 'RatingPage',
-    component: RatingPage
+    component: () => import('../views/RatingPage.vue')
   },
   {
     path: '/fireLogin',
     name: 'FireLogin',
-    component: FireLogin
+    component: () => import('../views/FirebaseLogin.vue')
   },
   {
     path: '/fireRegister',
     name: 'FireRegister',
-    component: FireRegister
+    component: () => import('../views/FirebaseRegistrationPage.vue')
   },
   {
     path: '/addBook',
     name: 'AddBook',
-    component: AddBookView
+    component: () => import('../views/AddBook.vue')
   },
   {
-    path: '/bookLIst',
-    name: '/BookLIst',
-    component: BookList
+    path: '/bookList',  // Note the change in the route name to correct capitalization
+    name: 'BookList',
+    component: () => import('../components/BookList.vue')
   },
   {
     path: '/getBookCount',
     name: 'GetBookCount',
-    component: GetBookCountView
+    component: () => import('../views/GetBookCountView.vue')
   },
   {
     path: '/weatherCheck',
     name: 'WeatherCheck',
-    component: WeatherView
+    component: () => import('../views/WeatherView.vue')
   },
   {
     path: '/countBookAPI',
     name: 'CountBookAPI',
-    component: CountBookAPI
+    component: () => import('../views/CountBookAPI.vue')
   },
   {
     path: '/getAllBookAPI',
     name: 'GetAllBookAPI',
-    component: GetAllBookAPI
+    component: () => import('../views/GetAllBookAPI.vue')
   }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes
-})
+});
 
 router.beforeEach((to, from, next) => {
   if (!store.state.isAuthenticated && to.name === 'UserProfile') {
-    alert('You must log in to view your profile.')
-    return { name: 'Login' }
+    alert('You must log in to view your profile.');
+    next({ name: 'LoginPage' });
   } else {
-    next()
+    next();
   }
-})
+});
 
-// router.beforeEach(async (to, from) => {
-//   if(to.name == 'About'{
-//     return false;
-//   }
-// })
-
-export default router
+export default router;

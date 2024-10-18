@@ -17,8 +17,7 @@ module.exports = {
   },
     publicPath: process.env.NODE_ENV === 'production'
       ? '/Deployment_exercise/'
-      : '/',
-      outputDir: 'dist',
+      : '/'
   }
 
 // This comment will trigger ghpages render again

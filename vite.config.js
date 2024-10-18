@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: 'https://blizzard-gh.github.io/Deployment_exercise/',
+  base: '/Deployment_exercise/',
   build: {
     outDir: 'dist',
     logLevel: 'info',

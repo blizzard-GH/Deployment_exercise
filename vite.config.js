@@ -10,7 +10,9 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/Deployment_exercise/',
+  base: process.env.NODE_ENV === 'production'
+    ? '/Deployment_exercise/' // Replace <repository-name> with your GitHub repository name
+    : '/',
   build: {
     outDir: 'dist',
     logLevel: 'info',

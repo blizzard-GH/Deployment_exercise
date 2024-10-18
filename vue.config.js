@@ -16,7 +16,7 @@ module.exports = {
     },
   },
     publicPath: process.env.NODE_ENV === 'production'
-      ? 'https://blizzard-gh.github.io/Deployment_exercise/'
+      ? '/Deployment_exercise/'
       : '/',
       outputDir: 'dist',
   }

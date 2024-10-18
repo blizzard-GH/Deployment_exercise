@@ -6,11 +6,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Deployment_exercise',
   plugins: [
     vue(),
     vueDevTools(),
   ],
+  base: '/Deployment_exercise/',
   build: {
     outDir: 'dist',
     logLevel: 'info',
